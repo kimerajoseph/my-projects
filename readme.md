@@ -15,5 +15,12 @@
 DC faults etc)
 2. Send out emails in case of diff comm failure
 
+## STRUCTURE
+1. All data processing functions are put in the "data_processing_functions.py" file. this ensures that they
+are written once and called from any python script
+2. Functions are not included in DAGs. They are simply called. This is meant to keep the DAGs simple
+3. We use xcom to pass data between DAGs. We only pass parameters (no big data files passed). xcom clears
+the DAG xcom parameters for each run
+
 ## TOOLS
 https://excalidraw.com/
