@@ -22,5 +22,13 @@ are written once and called from any python script
 3. We use xcom to pass data between DAGs. We only pass parameters (no big data files passed). xcom clears
 the DAG xcom parameters for each run
 
+## RANK CRITICAL EVENTS
+1. Much as some events are all critical, we have to rank already critical events in order of importance
+Rating is based on critical level, substation location, installed capacity, generation presence etc
+2. Events are ranked and teams dispatched based on their ranks
+3. create bins for installed capacity. Because the values are high, when sorting, this values has much
+greater influence than the rest. The rest are categorical
+3. Some events need timers eg battery bank faults to track time before batteries are drained and disaster 
+potentially strikes
 ## TOOLS
 https://excalidraw.com/

@@ -12,7 +12,7 @@ password = os.getenv("PASSWORD")
 db_name = os.getenv("LOCAL_DB")
 port = os.getenv("PORT")
 
-print(db_username)
+# print(db_username)
 
 engine = create_engine(f'mysql+pymysql://root:{password}@{host}/{db_name}')
 
@@ -71,7 +71,7 @@ def get_substation_details():
 # INSERT DATA INTO DB
 #################################################################################
 def insert_data_into_db(table_name, df):
-    df.to_sql(con=engine, name=f"{table_name}", if_exists="append")
+    df.to_sql(con=engine, name=table_name, if_exists="append")
 
     return
 

@@ -4,7 +4,14 @@ substation name - name of the substation
 voltage - various voltage levels present at the substation. the more voltage levels, the bigger the substation
 voltage levels - count of the voltage levels
 installed capacity - installed transformer capacity 
+capacity band - created bins to group installed capacities of transformers. Useful when ranking events
 location - region where the substation is located. substations in the central region are generally bigger, more loaded and more important
+region_code - Codes assigned depending on importance of the region.central region - Most important. 
+    produces more than 90% of the country's GDP.thats where most of the load is
+    eastern - has the biggest dams, the second most industrialized city in the country (Jinja), 
+    Country's largest single power consumer (Tororo cement), facilitates regional power trade with Kenya
+    western region - Second most important in terms of economic productivity
+    RANKINS. {"central":5,"eastern":4,"western":3,else, 1} 
 generators - indicates whether the substation has generators (dams) connected to it. 1-YES, 0-NO
 critical level - shows how important substation is to the national grid. 1 - NOT VERY IMPORTANT, 5- VERY IMPORTANT
 comments - brief description of why substation is assigned a given critical level
