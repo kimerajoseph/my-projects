@@ -27,3 +27,6 @@ substation_acronym - acronym(short form) used to represent the substation name
 substation name - name of the substation
 fault_voltage - voltage level at which faulty equipment operates
 critical level - shows how important substation is to the national grid. 1 - NOT VERY IMPORTANT, 5- VERY IMPORTANT
+fault_level_code - ranks event criticallity based on the voltage levels. DC and station supply faults are given
+more priority beacuse substation protection and control IEDs, alarms and fire systems need to be powered 24/7
+Rank - ranks the events in order of criticallity. events with the highest rank are attended to first 

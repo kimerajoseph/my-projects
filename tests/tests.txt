@@ -1,0 +1,12 @@
+UNIT TESTS
+- test filepath returned matches AWS s3 file path
+- test value returned from "get_raw_data_from_scada_table" fxn matches AWS s3 file path
+- type of data returned "get_substation_details" function (HAS TO BE pandas dataframe)
+- type of data returned "clean_data" function (HAS TO BE pandas dataframe)
+- type of data returned "process_raw_data" function (HAS TO BE pandas dataframe)
+- can also check if columns are included in the dataframe
+- confirm dataframes are not empty
+
+INTEGRATION TESTS
+- check the input (past_days should be an integer)
+- check final output (insertion of data to DB and s3 bucket)

@@ -23,7 +23,7 @@ are written once and called from any python script
 the DAG xcom parameters for each run
 
 ## RANK CRITICAL EVENTS
-1. Much as some events are all critical, we have to rank already critical events in order of importance
+1. Much as events are all critical, we have to rank already critical events in order of importance.
 Rating is based on critical level, substation location, installed capacity, generation presence etc
 2. Events are ranked and teams dispatched based on their ranks
 3. create bins for installed capacity. Because the values are high, when sorting, this values has much

@@ -27,19 +27,21 @@ def get_raw_data_from_scada_table(past_days):
     my_search_date = datetime.strftime(datetime.now() - timedelta(past_days), '%Y-%m-%d')
     my_params={"serach_date":my_search_date}
     filtered_data = pd.read_sql(sql_query,con=engine, params=my_params)
-    print("filtered data", filtered_data.shape)
+    #print("filtered data", filtered_data.shape)
+
+    # name file using dates
     file_name = f"{my_search_date}_scada_data.parquet"
-    print("FILENAME: ",file_name)
+    #print("FILENAME: ",file_name)
     #try:
     s3_file_path=f's3://{s3_bucket}/{project_folder}/{file_name}'
-    print("s3_file_path: ",s3_file_path)
+    #print("s3_file_path: ",s3_file_path)
     wr.s3.to_parquet(
         df=filtered_data,
         path=s3_file_path,
         # dataset=True,
         # mode='overwrite',
     )
-    print("file path", s3_file_path)
+    #print("file path", s3_file_path)
     return s3_file_path
 
     # except Exception as err:

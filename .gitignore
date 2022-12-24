@@ -2,3 +2,4 @@
 *.parquet
 .env
 *.xlsx
+final-notes.md
